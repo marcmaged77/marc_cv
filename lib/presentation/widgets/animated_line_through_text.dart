@@ -22,7 +22,7 @@ class AnimatedLineThroughText extends StatefulWidget {
     this.isUnderlinedOnHover = true,
     this.isUnderlinedByDefault = false,
     this.hasOffsetAnimation = false,
-    this.duration = const Duration(milliseconds: 300),
+    this.duration = const Duration(milliseconds: 100),
     this.beginOffset = const Offset(0, 0),
     this.endOffset = const Offset(0.15, 0),
     this.hasSlideBoxAnimation = false,

@@ -1,7 +1,7 @@
 import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
 
-const double hiddenFactor = 2.0;
+const double hiddenFactor = 0.1;
 
 class AnimatedSlideBox extends AnimatedWidget {
   const AnimatedSlideBox({
@@ -58,23 +58,25 @@ class AnimatedSlideBox extends AnimatedWidget {
       height: height,
       child: Stack(
         children: [
-          Positioned(
-            top: hiddenFactor,
-            left: hiddenFactor,
-            child: Container(
-              width: visibleAnimation.value,
-              height: height - (hiddenFactor * 2),
-              color: boxColor,
-            ),
-          ),
-          Positioned(
-            top: 0,
-            child: Container(
-              width: invisibleAnimation.value,
-              height: height ,
-              color: coverColor,
-            ),
-          ),
+          // if(visibleAnimation.value > 334)
+          // Positioned(
+          //   top: hiddenFactor,
+          //   left: hiddenFactor,
+          //   child: Container(
+          //     width: visibleAnimation.value,
+          //     height: height - (hiddenFactor * 2),
+          //     color: boxColor,
+          //   ),
+          // ),
+          //
+          // Positioned(
+          //   top: 0,
+          //   child: Container(
+          //     width: invisibleAnimation.value,
+          //     height: height ,
+          //     color: coverColor,
+          //   ),
+          // ),
         ],
       ),
     );

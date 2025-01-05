@@ -59,7 +59,7 @@ class _PageWrapperState extends State<PageWrapper>
   late AnimationController forwardSlideController;
   late AnimationController unveilPageSlideController;
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
-  Duration duration = Duration(milliseconds: 1250);
+  Duration duration = Duration(milliseconds: 500);
 
   @override
   void initState() {

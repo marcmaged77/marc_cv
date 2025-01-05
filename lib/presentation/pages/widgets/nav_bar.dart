@@ -7,6 +7,7 @@ import 'package:aerium/presentation/widgets/empty.dart';
 import 'package:aerium/presentation/widgets/nav_item.dart';
 import 'package:aerium/presentation/widgets/spaces.dart';
 import 'package:aerium/values/values.dart';
+import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -55,23 +56,33 @@ class NavBar extends StatelessWidget {
   Widget mobileNavBar(BuildContext context) {
     return Container(
       width: widthOfScreen(context),
-      padding: const EdgeInsets.symmetric(
-        horizontal: Sizes.PADDING_30,
-        vertical: Sizes.PADDING_24,
-      ),
-      child: Row(
-        children: [
-          AppLogo(fontSize: Sizes.TEXT_SIZE_40, titleColor: appLogoColor,),
-          Spacer(),
-          InkWell(
-            onTap: onMenuTap,
-            child: Icon(
-              FeatherIcons.menu,
-              size: Sizes.TEXT_SIZE_30,
-              color: appLogoColor,
+      // padding: const EdgeInsets.symmetric(
+      //   horizontal: Sizes.PADDING_30,
+      //   vertical: Sizes.PADDING_24,
+      // ),
+      child:    BlurryContainer(
+        elevation: 0,
+        padding: const EdgeInsets.symmetric(
+          horizontal: Sizes.PADDING_40,
+          vertical: Sizes.PADDING_24,
+        ),
+        child: Row(
+          children: [
+            AppLogo(
+              fontSize: Sizes.TEXT_SIZE_40,
+              titleColor: appLogoColor,
             ),
-          ),
-        ],
+            Spacer(),
+            InkWell(
+              onTap: onMenuTap,
+              child: Icon(
+                FeatherIcons.menu,
+                size: Sizes.TEXT_SIZE_30,
+                color: appLogoColor,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -79,7 +90,7 @@ class NavBar extends StatelessWidget {
   Widget webNavBar(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     TextStyle? style = selectedRouteTitleStyle ??
-        textTheme.bodyText1?.copyWith(
+        textTheme.bodyLarge?.copyWith(
           color: AppColors.black,
           fontWeight: FontWeight.w400,
           fontSize: Sizes.TEXT_SIZE_12,
@@ -88,30 +99,46 @@ class NavBar extends StatelessWidget {
       width: widthOfScreen(context),
       height: heightOfScreen(context),
       padding: const EdgeInsets.symmetric(
-        horizontal: Sizes.PADDING_40,
-        vertical: Sizes.PADDING_24,
-      ),
+          // horizontal: Sizes.PADDING_40,
+          // vertical: Sizes.PADDING_24,
+          ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              AppLogo(titleColor: appLogoColor),
-              Spacer(),
-              ..._buildNavItems(context, menuList: Data.menuItems),
-              AeriumButton(
-                height: Sizes.HEIGHT_36,
-                hasIcon: false,
-                width: 80,
-                buttonColor: AppColors.white,
-                borderColor: appLogoColor,
-                onHoverColor: appLogoColor,
-                title: StringConst.RESUME.toUpperCase(),
-                onPressed: () {
-                  Functions.launchUrl(DocumentPath.CV);
-                },
+          BlurryContainer(
+            elevation: 0,
+            padding: const EdgeInsets.symmetric(
+              horizontal: Sizes.PADDING_40,
+              vertical: Sizes.PADDING_24,
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                  // border: Border(
+                  //   bottom: BorderSide(
+                  //     color: Colors.black,
+                  //   ),
+                  // ),
+                  ),
+              child: Row(
+                children: [
+                  AppLogo(titleColor: appLogoColor),
+                  Spacer(),
+                  ..._buildNavItems(context, menuList: Data.menuItems),
+                  AeriumButton(
+                    height: Sizes.HEIGHT_36,
+                    hasIcon: false,
+                    width: 80,
+                    buttonColor: AppColors.white,
+                    borderColor: appLogoColor,
+                    onHoverColor: appLogoColor,
+                    title: StringConst.RESUME.toUpperCase(),
+                    onPressed: () {
+                      Functions.launchUrl(DocumentPath.CV);
+                    },
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
           Spacer(),
           hasSideTitle

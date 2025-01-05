@@ -2,8 +2,8 @@ part of values;
 
 class StringConst {
   //strings
-  static const String APP_NAME = "David Legend Portfolio";
-  static const String APP_TITLE = "David Legend Portfolio";
+  static const String APP_NAME = "Marc Maged Portfolio";
+  static const String APP_TITLE = "Marc Maged Portfolio";
   static const String SITE_URL = "https://davidcobbina.com";
 
   static const String HOME = "Home";
@@ -22,7 +22,7 @@ class StringConst {
 
   // Home Page
   static const String HI = "Hi,";
-  static const String DEV_INTRO = "I'm David.";
+  static const String DEV_INTRO = "I'm Marc.";
   static const String DEV_TITLE = "Software Engineer.";
   static const String DEV_DESC = "Mobile Engineer / Full Stack Developer / Cloud Devops";
   static const String SEE_MY_WORKS = "See my works";
@@ -124,11 +124,11 @@ class StringConst {
   static const String PROJECT_NAME = "Project Name";
 
   static const String INTRO = "Hi, my name is";
-  static const String DEV_NAME = "David Cobbina";
+  static const String DEV_NAME = "Marc Maged";
   static const String PUNCH_LINE = "I build things with flutter";
   static const String SPECIALITY = "FLUTTER DEV";
   static const String DESIGNED_IN = "Made in Ghana with ";
-  static const String BUILT_BY = "Built by David Cobbina ";
+  static const String BUILT_BY = "Built by Marc Maged ";
 
   
   //Form Hint Texts

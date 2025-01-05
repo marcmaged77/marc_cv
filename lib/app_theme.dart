@@ -60,79 +60,79 @@ class AppTheme {
   static const _light = FontWeight.w300;
 
   static final TextTheme _textTheme = TextTheme(
-    headline1: TextStyle(
+    headlineLarge: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_96,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline2: TextStyle(
+    headlineMedium: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_60,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline3: GoogleFonts.roboto(
+    headlineSmall: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_48,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline4: TextStyle(
+    titleLarge: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_34,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline5: GoogleFonts.roboto(
+    titleMedium: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_24,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline6: TextStyle(
+    titleSmall: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_20,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle1: TextStyle(
+    displayLarge: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.secondaryColor,
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle2: GoogleFonts.roboto(
+    displayMedium: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.secondaryColor,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    bodyText2: GoogleFonts.roboto(
+    bodyMedium: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    button: GoogleFonts.roboto(
+    bodySmall: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontStyle: FontStyle.normal,
       fontWeight: _medium,
     ),
-    caption: TextStyle(
+    displaySmall: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_12,
       color: AppColors.white,
